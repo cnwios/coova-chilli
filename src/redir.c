@@ -1579,7 +1579,8 @@ int redir_reply(struct redir_t *redir, struct redir_socket_t *sock,
         bdestroy(buffer);
         return 0;
   }
-  
+
+#if 0
   /* pass android generate_204 pass */
   if ( strstr(conn->s_state.redir.userurl, "/generate_204") != NULL ) {
         redir_http(buffer, "204 No Content");
@@ -1597,6 +1598,7 @@ int redir_reply(struct redir_t *redir, struct redir_socket_t *sock,
         bdestroy(buffer);
         return 0;
   }
+#endif
   
     /*by jack*/
   /*
